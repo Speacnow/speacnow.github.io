@@ -1175,7 +1175,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff09e9;
+  background: #21f5ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2532,12 +2532,23 @@ ul.breadcrumb li + li:last-child {
 .links-of-blogroll-item {
   padding: 0;
 }
-body {
-  background: url("/images/taytay2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 50% 50%;
+@media screen and (max-width: 800px) {
+  body {
+    background: url("/images/taytay/9.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
+@media screen and (min-width: 800px) {
+  body {
+    background: url("/images/taytay/13.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
 }
 .content-wrap {
   opacity: 0.8;
