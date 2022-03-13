@@ -25,18 +25,18 @@
   <meta name="description" content="hexo的变态引入图片方式就不用多说了吧，typora作为当前最优雅和流行markdown的编辑器，他们的图片路径引用方式不统一，这就导致了我想在本地直接看md文件，但是发布到hexo中有需要手动改变图片引用路径。经过一番探索，完美解决 设置typora偏好设置 –&gt; 图像 –&gt; 插入图片时..选择复制到指定路径 选择.&#x2F;${filename} 设置hexo 添加库：npm insta">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo与typora图片路径引用方式保持一致">
-<meta property="og:url" content="http://example.com/2022/03/11/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/index.html">
+<meta property="og:url" content="http://example.com/2022/03/11/blog/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/index.html">
 <meta property="og:site_name" content="今天也要热爱生活">
 <meta property="og:description" content="hexo的变态引入图片方式就不用多说了吧，typora作为当前最优雅和流行markdown的编辑器，他们的图片路径引用方式不统一，这就导致了我想在本地直接看md文件，但是发布到hexo中有需要手动改变图片引用路径。经过一番探索，完美解决 设置typora偏好设置 –&gt; 图像 –&gt; 插入图片时..选择复制到指定路径 选择.&#x2F;${filename} 设置hexo 添加库：npm insta">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-11T07:29:07.000Z">
-<meta property="article:modified_time" content="2022-03-11T07:38:56.860Z">
+<meta property="article:modified_time" content="2022-03-13T15:54:36.124Z">
 <meta property="article:author" content="Orien Yang">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="next">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/03/11/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/">
+<link rel="canonical" href="http://example.com/2022/03/11/blog/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/">
 
 
 <script id="page-configurations">
@@ -60,19 +60,6 @@
   border-radius: 3px;
   display: initial;
   padding: 1px 4px;
-}
-</style><style>
-#needsharebutton-float {
-  bottom: 88px;
-  cursor: pointer;
-  left: -8px;
-  position: fixed;
-  z-index: 9999;
-}
-#needsharebutton-float .btn {
-  border: 1px solid $btn-default-border-color;
-  border-radius: 4px;
-  padding: 0 10px 0 14px;
 }
 </style>
   <title>hexo与typora图片路径引用方式保持一致 | 今天也要热爱生活</title>
@@ -160,7 +147,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -223,7 +210,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/11/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/11/blog/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/tay.jpg">
@@ -245,10 +232,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-11 15:29:07 / 修改时间：15:38:56" itemprop="dateCreated datePublished" datetime="2022-03-11T15:29:07+08:00">2022-03-11</time>
+              <time title="创建时间：2022-03-11 15:29:07" itemprop="dateCreated datePublished" datetime="2022-03-11T15:29:07+08:00">2022-03-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-13 23:54:36" itemprop="dateModified" datetime="2022-03-13T23:54:36+08:00">2022-03-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -273,10 +266,10 @@
         <p>hexo的变态引入图片方式就不用多说了吧，typora作为当前最优雅和流行markdown的编辑器，他们的图片路径引用方式不统一，这就导致了我想在本地直接看md文件，但是发布到hexo中有需要手动改变图片引用路径。<br>经过一番探索，完美解决</p>
 <h1 id="设置typora"><a href="#设置typora" class="headerlink" title="设置typora"></a>设置typora</h1><p>偏好设置 –&gt; 图像 –&gt; 插入图片时..<br>选择复制到指定路径 选择./${filename}</p>
 <h1 id="设置hexo"><a href="#设置hexo" class="headerlink" title="设置hexo"></a>设置hexo</h1><ol>
-<li>添加库：npm install –save-dev hexo-typora-image<br>npm 官网 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-typora-image?activeTab=readme">https://www.npmjs.com/package/hexo-typora-image?activeTab=readme</a></li>
-<li>设置post.md的 front matter模板<br>&lt;…&gt;<br>typora-copy-images-to: hexo与typora图片路径引用方式保持一致</li>
+<li>添加库：npm install hexo-typora-img<br>npm 官网 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-typora-img">https://www.npmjs.com/package/hexo-typora-img</a></li>
+<li>设置scaffolds文件夹中的post.md的front matter模板，添加：<br>typora-copy-images-to: hexo与typora图片路径引用方式保持一致</li>
 <li>设置_config.yml<br>post_asset_folder: true</li>
-<li>解决首页不加载图片的问题<br>marked:<br>prependRoot: true<br>postAsset: true</li>
+<li>解决首页不加载图片的问题,设置_config.yml<br>marked:<br>prependRoot: true<br>postAsset: true</li>
 <li>控制首页想显示什么（基于next）<br><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/theme-settings/posts">https://theme-next.js.org/docs/theme-settings/posts</a><br>方法一:在想在首页显示的内容后面添加<code>&lt;!-- more --&gt; </code><br>方法二：使用description ,但是没办法使用图片</li>
 </ol>
 
@@ -319,10 +312,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/03/10/taylor/" rel="prev" title="taylor">
+    <a href="/2022/03/10/taylor/taylor/" rel="prev" title="taylor">
       <i class="fa fa-chevron-left"></i> taylor
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/13/web_basics/CSS%E5%9F%BA%E7%A1%80/" rel="next" title="CSS基础">
+      CSS基础 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -410,7 +406,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -508,11 +504,7 @@
   
 
   
-<div id="needsharebutton-float">
-      <span class="btn">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-      </span>
-    </div>
+
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
   <script>
       pbOptions = {};
@@ -521,12 +513,6 @@
         pbOptions.position = "bottomCenter";
         pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
       new needShareButton('#needsharebutton-postbottom', pbOptions);
-      flOptions = {};
-        flOptions.iconStyle = "default";
-        flOptions.boxForm = "vertical";
-        flOptions.position = "topRight";
-        flOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
-      new needShareButton('#needsharebutton-float', flOptions);
   </script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
 </html>

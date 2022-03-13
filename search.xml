@@ -1,39 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/03/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>mytest</category>
-      </categories>
-      <tags>
-        <tag>tay</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo与typora图片路径引用方式保持一致</title>
-    <url>/2022/03/11/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/</url>
+    <url>/2022/03/11/blog/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/</url>
     <content><![CDATA[<p>hexo的变态引入图片方式就不用多说了吧，typora作为当前最优雅和流行markdown的编辑器，他们的图片路径引用方式不统一，这就导致了我想在本地直接看md文件，但是发布到hexo中有需要手动改变图片引用路径。<br>经过一番探索，完美解决</p>
 <h1 id="设置typora"><a href="#设置typora" class="headerlink" title="设置typora"></a>设置typora</h1><p>偏好设置 –&gt; 图像 –&gt; 插入图片时..<br>选择复制到指定路径 选择./${filename}</p>
 <h1 id="设置hexo"><a href="#设置hexo" class="headerlink" title="设置hexo"></a>设置hexo</h1><ol>
-<li>添加库：npm install –save-dev hexo-typora-image<br>npm 官网 <a href="https://www.npmjs.com/package/hexo-typora-image?activeTab=readme">https://www.npmjs.com/package/hexo-typora-image?activeTab=readme</a></li>
-<li>设置post.md的 front matter模板<br>&lt;…&gt;<br>typora-copy-images-to: hexo与typora图片路径引用方式保持一致</li>
+<li>添加库：npm install hexo-typora-img<br>npm 官网 <a href="https://www.npmjs.com/package/hexo-typora-img">https://www.npmjs.com/package/hexo-typora-img</a></li>
+<li>设置scaffolds文件夹中的post.md的front matter模板，添加：<br>typora-copy-images-to: hexo与typora图片路径引用方式保持一致</li>
 <li>设置_config.yml<br>post_asset_folder: true</li>
-<li>解决首页不加载图片的问题<br>marked:<br>prependRoot: true<br>postAsset: true</li>
+<li>解决首页不加载图片的问题,设置_config.yml<br>marked:<br>prependRoot: true<br>postAsset: true</li>
 <li>控制首页想显示什么（基于next）<br><a href="https://theme-next.js.org/docs/theme-settings/posts">https://theme-next.js.org/docs/theme-settings/posts</a><br>方法一:在想在首页显示的内容后面添加<code>&lt;!-- more --&gt; </code><br>方法二：使用description ,但是没办法使用图片</li>
 </ol>
 ]]></content>
@@ -47,18 +23,716 @@
   </entry>
   <entry>
     <title>taylor</title>
-    <url>/2022/03/10/taylor/</url>
-    <content><![CDATA[<p>1234</p>
-<p><img src="/2022/03/10/taylor/Taylor-Swift-89_1920x1080.jpg" alt="Taylor-Swift-89_1920x1080"></p>
+    <url>/2022/03/10/taylor/taylor/</url>
+    <content><![CDATA[<p><img src="/2022/03/10/taylor/taylor/639902.jpg" alt="639902"></p>
 <span id="more"></span>
 
-<h1 id="test-fsdfsdfsfsf"><a href="#test-fsdfsdfsfsf" class="headerlink" title="test fsdfsdfsfsf"></a>test fsdfsdfsfsf</h1><p><img src="/2022/03/10/taylor/639902.jpg" alt="639902"></p>
-]]></content>
+<h1 id="泰美勒"><a href="#泰美勒" class="headerlink" title="泰美勒"></a>泰美勒</h1>]]></content>
       <categories>
         <category>tay2</category>
       </categories>
       <tags>
         <tag>tay</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS基础</title>
+    <url>/2022/03/13/web_basics/CSS%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer"/>
+
+<h1 id="字体文本"><a href="#字体文本" class="headerlink" title="字体文本"></a>字体文本</h1><h2 id="相对字体大小"><a href="#相对字体大小" class="headerlink" title="相对字体大小"></a>相对字体大小</h2><table>
+<thead>
+<tr>
+<th align="left">单位</th>
+<th align="left">相对于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>em</code></td>
+<td align="left"><em>在 font-size 中使用是相对于父元素的字体大小</em>，在其他属性中使用是相对于自身的字体大小，如 width</td>
+</tr>
+<tr>
+<td align="left"><code>ex</code></td>
+<td align="left">字符“x”的高度</td>
+</tr>
+<tr>
+<td align="left"><code>ch</code></td>
+<td align="left">数字“0”的宽度</td>
+</tr>
+<tr>
+<td align="left"><code>rem</code></td>
+<td align="left">根元素的字体大小</td>
+</tr>
+<tr>
+<td align="left"><code>lh</code></td>
+<td align="left">元素的line-height</td>
+</tr>
+<tr>
+<td align="left"><code>vw</code></td>
+<td align="left">视窗宽度的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vh</code></td>
+<td align="left">视窗高度的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vmin</code></td>
+<td align="left">视窗较小尺寸的1%</td>
+</tr>
+<tr>
+<td align="left"><code>vmax</code></td>
+<td align="left">视图大尺寸的1%</td>
+</tr>
+</tbody></table>
+<p>em：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.f</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: <span class="number">16px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">160px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">160px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: lightcoral;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.s</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: <span class="number">0.5em</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">10em</span>;//相对于自己的<span class="attribute">font-size</span>，</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>:<span class="number">10em</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: lightgreen;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;f&quot;</span>&gt;</span></span><br><span class="line">        1111</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;s&quot;</span>&gt;</span>2222<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="/2022/03/13/web_basics/CSS%E5%9F%BA%E7%A1%80/image-20210810101154460.png" alt="image-20210810101154460"></p>
+<p>rem：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">html</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.f</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>:<span class="number">10rem</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: lightcoral;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.s</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">10rem</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>:<span class="number">10rem</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: lightgreen;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;f&quot;</span>&gt;</span></span><br><span class="line">        1111</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;s&quot;</span>&gt;</span>2222<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="/2022/03/13/web_basics/CSS%E5%9F%BA%E7%A1%80/image-20210810101949874.png" alt="image-20210810101949874"></p>
+<h2 id="font-字体属性"><a href="#font-字体属性" class="headerlink" title="font 字体属性"></a>font 字体属性</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">50px</span>; 		<span class="comment">/*字体大小*/</span></span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">30px</span>;      <span class="comment">/*行高*/</span></span><br><span class="line">	<span class="attribute">font-family</span>: 幼圆,黑体; 	<span class="comment">/*字体类型：如果没有幼圆就显示黑体，没有黑体就显示默认*/</span></span><br><span class="line">	<span class="attribute">font-style</span>: italic ;		<span class="comment">/*italic表示斜体，normal表示不倾斜*/</span></span><br><span class="line">	<span class="attribute">font-weight</span>: bold;	<span class="comment">/*粗体*/</span></span><br><span class="line">	<span class="attribute">font-variant</span>: small-caps;  <span class="comment">/*小写变大写*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如何让单行文本垂直居中</p>
+<p>小技巧：如果一段文本只有一行，如果此时设置<strong>行高 = 盒子高</strong>，就可以保证单行文本垂直居中。</p>
+<h3 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h3><p><code>vertical-align</code>属性可用于指定<strong>行内元素</strong>（inline）、<strong>行内块元素</strong>（inline-block）、<strong>表格的单元格</strong>（table-cell）的垂直对齐方式。主要是用于图片、表格、文本的对齐。</p>
+<p>vertical-align 的属性值可以归为以下4类</p>
+<ul>
+<li><p><strong>线类</strong>，如 Baseline、Top、Middle、Bottom ；</p>
+</li>
+<li><p>baseline 为 vertical-align 的默认值，其意思是指基线对齐</p>
+<img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/3/8/170ba4210376fdef~tplv-t2oaga2asx-watermark.awebp" alt="img" style="zoom:50%;" /></li>
+<li><p>middle 这个属性值用得比较多。</p>
+</li>
+</ul>
+<blockquote>
+<p>对于内联元素指的是元素的垂直中心点与行框盒子基线往上 1/2x-height 处对齐，简单点说就是字母 X 的中心位置对齐；对于 table-cell 元素，指的是单元格填充盒子相对于外面的表格行居中对齐。</p>
+</blockquote>
+<img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/3/8/170ba421070ad142~tplv-t2oaga2asx-watermark.awebp" alt="img" style="zoom:50%;" />
+
+<h3 id="text-align"><a href="#text-align" class="headerlink" title="text-align"></a>text-align</h3><p>text-align 属性规定元素中的文本的<em>水平对齐方式</em>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">h1 &#123;text-align:center&#125;</span><br><span class="line">h2 &#123;text-align:left&#125;</span><br><span class="line">h3 &#123;text-align:right&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<img src="CSS基础/image-20210810110043997.png" alt="image-20210810110043997" style="zoom:50%;" />
+
+<h3 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h3><ul>
+<li><code>letter-spacing: 0.5cm ;</code>  单个字母之间的间距</li>
+<li><code>word-spacing: 1cm;</code>   单词之间的间距</li>
+<li><code>text-decoration: none;</code> 字体修饰：none 去掉下划线、<strong>underline 下划线</strong>、line-through 中划线、overline 上划线</li>
+<li><code>color:red;</code> 字体颜色</li>
+<li><code>text-align: center;</code> 在当前容器中的对齐方式。属性值可以是：left、right、center（<font color="#0000FF"><strong>在当前容器的中间</strong></font>）、justify</li>
+<li><code>text-transform: lowercase;</code> 单词的字体大小写。属性值可以是：<code>uppercase</code>（单词大写）、<code>lowercase</code>（单词小写）、<code>capitalize</code>（每个单词的首字母大写）</li>
+</ul>
+<h2 id="overflow属性：超出范围的内容要怎么处理"><a href="#overflow属性：超出范围的内容要怎么处理" class="headerlink" title="overflow属性：超出范围的内容要怎么处理"></a>overflow属性：超出范围的内容要怎么处理</h2><p><code>overflow</code>属性的属性值可以是：</p>
+<ul>
+<li><p><code>visible</code>：默认值。多余的内容不剪切也不添加滚动条，会全部显示出来。</p>
+</li>
+<li><p><code>hidden</code>：不显示超过对象尺寸的内容。</p>
+</li>
+<li><p><code>auto</code>：如果内容不超出，则不显示滚动条；如果内容超出，则显示滚动条。</p>
+</li>
+<li><p><code>scroll</code>：Windows 平台下，无论内容是否超出，总是显示滚动条。Mac 平台下，和 <code>auto</code> 属性相同。</p>
+</li>
+</ul>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h2 id="background-的常见背景属性"><a href="#background-的常见背景属性" class="headerlink" title="background 的常见背景属性"></a>background 的常见背景属性</h2><p><strong>css2.1</strong> 中，常见的背景属性有以下几种：（经常用到，要记住）</p>
+<ul>
+<li><p><code>background-color:#ff99ff;</code>  设置元素的背景颜色。</p>
+</li>
+<li><p><code>background-image:url(images/2.gif);</code> 将图像设置为背景。</p>
+</li>
+<li><p><code>background-repeat: no-repeat;</code>  设置背景图片是否重复及如何重复，默认平铺满。（重要）</p>
+<ul>
+<li><code>no-repeat</code>不要平铺；</li>
+<li><code>repeat-x</code>横向平铺；</li>
+<li><code>repeat-y</code>纵向平铺。</li>
+</ul>
+</li>
+<li><p><code>background-position:center top;</code> <strong>设置背景图片在当前容器中的位置。</strong></p>
+<p>background-position:向右偏移量 向下偏移量;background-position: 描述左右的词 描述上下的词;</p>
+</li>
+<li><p><code>background-attachment:scroll;</code> <strong>设置背景图片是否跟着滚动条一起移动。</strong><br>属性值可以是：<code>scroll</code>（与fixed属性相反，默认属性）、<code>fixed</code>（背景就会被固定住，不会被滚动条滚走）。</p>
+</li>
+<li><p>另外还有一个综合属性叫做<code>background</code>，它的作用是：将上面的多个属性写在一个声明中。</p>
+</li>
+</ul>
+<p><strong>CSS3</strong> 中，新增了一些background属性：</p>
+<ul>
+<li><p><code>background-origin</code>属性：控制背景从什么地方开始显示。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 从 padding-box 内边距开始显示背景图 */</span></span><br><span class="line"><span class="attribute">background-origin</span>: padding-box;           //默认值</span><br><span class="line">  </span><br><span class="line"><span class="comment">/* 从 border-box 边框开始显示背景图  */</span></span><br><span class="line"><span class="attribute">background-origin</span>: border-box;</span><br><span class="line">  </span><br><span class="line"><span class="comment">/* 从 content-box 内容区域开始显示背景图  */</span></span><br><span class="line"><span class="attribute">background-origin</span>: content-box;</span><br></pre></td></tr></table></figure></li>
+<li><p><code>background-clip</code> 背景裁切</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">- `<span class="attribute">border</span>-box` 超出 <span class="attribute">border</span>-box 的部分，将裁剪掉</span><br><span class="line">  </span><br><span class="line">- `<span class="attribute">padding</span>-box` 超出 <span class="attribute">padding</span>-box 的部分，将裁剪掉</span><br><span class="line">  </span><br><span class="line">- `<span class="attribute">content</span>-box` 超出 <span class="attribute">content</span>-box 的部分，将裁剪掉</span><br></pre></td></tr></table></figure></li>
+<li><p><code>background-size</code> 调整尺寸</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 宽、高的具体数值 */</span></span><br><span class="line"><span class="attribute">background-size</span>: <span class="number">500px</span> <span class="number">500px</span>;</span><br><span class="line">  </span><br><span class="line"><span class="comment">/* 宽高的百分比（相对于容器的大小） */</span></span><br><span class="line"><span class="attribute">background-size</span>: <span class="number">50%</span> <span class="number">50%</span>;   // 如果两个属性值相同，可以简写成：<span class="attribute">background-size</span>: <span class="number">50%</span>;</span><br><span class="line">  </span><br><span class="line"><span class="attribute">background-size</span>: <span class="number">100%</span> auto;  //这个属性可以自己试验一下。</span><br><span class="line">  </span><br><span class="line"><span class="comment">/* cover：图片始终填充满容器，且保证长宽比不变。图片如果有超出部分，则超出部分会被隐藏。 */</span></span><br><span class="line"><span class="attribute">background-size</span>: cover;</span><br><span class="line">  </span><br><span class="line"><span class="comment">/* contain：将图片完整地显示在容器中，且保证长宽比不变。可能会导致容器的部分区域为空白。  */</span></span><br><span class="line"><span class="attribute">background-size</span>: contain;</span><br></pre></td></tr></table></figure></li>
+<li><p>多重背景:我们可以给一个盒子同时设置多个背景，用以逗号隔开即可。可用于自适应局。</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">416px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#000</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 给盒子加多个背景，按照背景语法格式书写，多个背景使用逗号隔开 */</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">images/bg1.png</span>) no-repeat left top,</span></span><br><span class="line"><span class="language-css">            <span class="built_in">url</span>(<span class="string">images/bg2.png</span>) no-repeat right top,</span></span><br><span class="line"><span class="language-css">            <span class="built_in">url</span>(<span class="string">images/bg3.png</span>) no-repeat right bottom,</span></span><br><span class="line"><span class="language-css">            <span class="built_in">url</span>(<span class="string">images/bg4.png</span>) no-repeat left bottom,</span></span><br><span class="line"><span class="language-css">            <span class="built_in">url</span>(<span class="string">images/bg5.png</span>) no-repeat center;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>渐变：background-image 线性渐变、径向渐变</p>
+<h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><p><strong>基本选择器：</strong></p>
+<ul>
+<li>  标签选择器：针对<strong>一类</strong>标签</li>
+<li>  ID 选择器：针对某<strong>一个</strong>特定的标签使用</li>
+<li>  类选择器：针对<strong>你想要的所有</strong>标签使用</li>
+<li>  通用选择器（通配符）：针对所有的标签都适用（不建议使用）</li>
+</ul>
+<p><strong>高级选择器：</strong></p>
+<ul>
+<li><p>后代选择器：用空格隔开</p>
+</li>
+<li><p>交集选择器：选择器之间紧密相连</p>
+</li>
+<li><p>并集选择器（分组选择器）：用逗号隔开</p>
+</li>
+<li><p>伪类选择器</p>
+</li>
+<li><p>子代选择器，用符号<code>&gt;</code>表示</p>
+</li>
+<li><p>兄弟选择器</p>
+<blockquote>
+<ol>
+<li>选择器 +</li>
+</ol>
+<p>　　如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器。</p>
+<p>２. 选择器~<br>　　作用是查找某一个指定元素的后面的所有兄弟结点。</p>
+</blockquote>
+</li>
+<li><p>序选择器 <a href="https://blog.csdn.net/jwz934738949/article/details/88908132">https://blog.csdn.net/jwz934738949/article/details/88908132</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/Ameir_yang/article/details/69393316">https://blog.csdn.net/Ameir_yang/article/details/69393316</a></p>
+<blockquote>
+<p>序选择器:<br>css3中新增的选择器最具代表性的就是序选择器</p>
+<p>p:first-child的意思是：选出同级别中的第一个，然后再判断是否是<p>标签，如果是就改变属性，如果不是就不改变样式和属性。</p>
+<p><strong>1,同级别的第几个</strong><br>:first-child 选中同级别中的第一个<br>:last-child  选中同级别中的最后一个<br>:nth-child(n) 选中同级别中的第n个<br>:nth-last-child(n) 选中同级别中的倒数第n个<br>:only-child 选中父元素中只有一个子元素的元素<br>注意点:不区分类型</p>
+<p>x:first-of-type意思是：先选出<em>同级别同类型</em>的第一个，然后再判断是否是<x>标签。</p>
+<p><strong>2,同类型的第几个</strong><br>:first-of-type 选中同级别中同类型的第一个<br>:last-of-type 选中同级别中同类型的最后一个<br>:nth-of-type(n) 选中同级别中同类型的第n个<br>:nth-last-of-type(n) 选中同级别中同类型的倒数第n个<br>:only-of-type 选中父元素中子元素的类型只有一种的元素</p>
+</blockquote>
+</li>
+<li><p>属性选择器</p>
+<table>
+<thead>
+<tr>
+<th align="left">选择器</th>
+<th align="left">例子</th>
+<th align="left">例子描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">[<a href="https://www.w3school.com.cn/cssref/selector_attribute.asp"><em>attribute</em>]</a></td>
+<td align="left">[target]</td>
+<td align="left">选择带有 target 属性的所有元素。</td>
+</tr>
+<tr>
+<td align="left">[<a href="https://www.w3school.com.cn/cssref/selector_attribute_value.asp"><em>attribute</em>=<em>value</em>]</a></td>
+<td align="left">[target=_blank]</td>
+<td align="left">选择带有 target=”_blank” 属性的所有元素。</td>
+</tr>
+<tr>
+<td align="left">[<a href="https://www.w3school.com.cn/cssref/selector_attribute_value_contain.asp"><em>attribute</em>~=<em>value</em>]</a></td>
+<td align="left">[title~=flower]</td>
+<td align="left">选择带有包含 “flower” 一词的 title 属性的所有元素。</td>
+</tr>
+<tr>
+<td align="left">[<a href="https://www.w3school.com.cn/cssref/selector_attribute_value_start.asp"><em>attribute</em>|=<em>value</em>]</a></td>
+<td align="left">[lang|=en]</td>
+<td align="left">选择带有以 “en” 开头的 lang 属性的所有元素。</td>
+</tr>
+<tr>
+<td align="left">[<a href="https://www.w3school.com.cn/cssref/selector_attr_begin.asp"><em>attribute</em>^=<em>value</em>]</a></td>
+<td align="left">a[href^=”https”]</td>
+<td align="left">选择其 href 属性值以 “https” 开头的每个 <a> 元素。</td>
+</tr>
+<tr>
+<td align="left">[<a href="https://www.w3school.com.cn/cssref/selector_attr_end.asp"><em>attribute</em>$=<em>value</em>]</a></td>
+<td align="left">a[href$=”.pdf”]</td>
+<td align="left">选择其 href 属性值以 “.pdf” 结尾的每个 <a> 元素。</td>
+</tr>
+<tr>
+<td align="left">[<a href="https://www.w3school.com.cn/cssref/selector_attr_contain.asp"><em>attribute</em>*=<em>value</em>]</a></td>
+<td align="left">a[href*=”w3school”]</td>
+<td align="left">选择其 href 属性值包含子串 “w3school” 的每个 <a> 元素</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h1 id="伪类与伪元素"><a href="#伪类与伪元素" class="headerlink" title="伪类与伪元素"></a>伪类与伪元素</h1><h2 id="伪类（伪类选择器）"><a href="#伪类（伪类选择器）" class="headerlink" title="伪类（伪类选择器）"></a>伪类（伪类选择器）</h2><p><strong>伪类</strong>：同一个标签，根据其<strong>不同的种状态，有不同的样式</strong>。这就叫做“伪类”。伪类用冒号来表示。</p>
+<p>比如div是属于box类，这一点很明确，就是属于box类。但是a属于什么类？不明确。因为需要看用户点击前是什么状态，点击后是什么状态。所以，就叫做“伪类”。</p>
+<p>伪类选择器分为两种。</p>
+<p>（1）<strong>静态伪类</strong>：只能用于<strong>超链接</strong>的样式。如下：</p>
+<ul>
+<li><code>:link</code> 超链接点击之前</li>
+<li><code>:visited</code> 链接被访问过之后</li>
+</ul>
+<p>PS：以上两种样式，只能用于超链接。</p>
+<p>（2）<strong>动态伪类</strong>：针对<strong>所有标签</strong>都适用的样式。如下：</p>
+<ul>
+<li><code>:hover</code> “悬停”：鼠标放到标签上的时候</li>
+<li><code>:active</code>    “激活”： 鼠标点击标签，但是不松手时。</li>
+<li><code>:focus</code> 是某个标签获得焦点时的样式（比如某个输入框获得焦点）</li>
+</ul>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><p>css的<code>伪元素</code>，之所以被称为伪元素，是因为他们不是真正的页面元素，<strong>html没有对应的元素</strong>，但是其所有用法和表现行为与真正的页面元素一样，可以对其使用诸如页面元素一样的css样式，表面上看上去貌似是页面的某些元素来展现，实际上是css样式展现的行为，因此被称为伪元素。</p>
+<h1 id="继承性与层叠性"><a href="#继承性与层叠性" class="headerlink" title="继承性与层叠性"></a>继承性与层叠性</h1><p>有一些属性，当给自己设置的时候，自己的后代都继承上了，这个就是<strong>继承性。</strong></p>
+<ul>
+<li><p><strong>关于文字样式的属性，都具有继承性。这些属性包括：color、 text-开头的、line-开头的、font-开头的。</strong></p>
+</li>
+<li><p>关于盒子、定位、布局的属性，都不能继承。</p>
+</li>
+</ul>
+<p><strong>层叠性：就是css处理冲突的能力。</strong> </p>
+<p>当多个选择器，选择上了某个元素的时候，要按照如下顺序统计权重：</p>
+<ul>
+<li><p> id 选择器</p>
+</li>
+<li><p> 类选择器、属性选择器、伪类选择器</p>
+</li>
+<li><p> 标签选择器、伪元素选择器</p>
+</li>
+<li><p> 1、对于相同的选择器（比如同样都是类选择器），其样式表排序：行级样式 &gt; 内嵌样式表 &gt; 外部样式表（就近原则）</p>
+</li>
+<li><p> 2、对于相同类型的样式表（比如同样都是内部样式表），其选择器排序：ID选择器 &gt; 类选择器 &gt; 标签选择器</p>
+</li>
+<li><p> 3、外部样式表的ID选择器  &gt; 内嵌样式表的标签选择器</p>
+</li>
+</ul>
+<p>!important标记：优先级最高</p>
+<h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><ul>
+<li>width和height：<strong>内容</strong>的宽度、高度（不是盒子的宽度、高度）。</li>
+<li>padding：内边距。</li>
+<li>border：边框。</li>
+<li>margin：外边距。</li>
+</ul>
+<p><img src="http://img.smyhvae.com/2015-10-03-css-27.jpg"></p>
+<p><code>box-sizing: content-box|border-box|inherit:</code></p>
+<p><img src="http://img.smyhvae.com/2015-10-03-css-30.jpg"></p>
+<h1 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p><strong>（1）空白折叠现象：</strong></p>
+<p>无论多少个空格、换行、tab，都会折叠为一个空格。</p>
+<p><strong>（2）高矮不齐，底边对齐：</strong></p>
+<p><strong>（3）自动换行，一行写不满，换行写。</strong></p>
+<h2 id="行内元素和块级元素"><a href="#行内元素和块级元素" class="headerlink" title="行内元素和块级元素"></a>行内元素和块级元素</h2><p>行内元素：</p>
+<ul>
+<li>与其他行内元素并排；</li>
+<li>不能设置宽、高。默认的宽度，就是文字的宽度。</li>
+</ul>
+<p>块级元素：</p>
+<ul>
+<li>霸占一行，不能与其他任何元素并列；</li>
+<li>能接受宽、高。如果不设置宽度，那么宽度将默认变为父亲的100%。</li>
+</ul>
+<p><strong>行内块元素(inline-block)：</strong>结合的行内和块级的优点，既可以设置长宽，可以让padding和margin生效，又可以和其他行内元素并排。</p>
+<p>互转: 利用display</p>
+<h2 id="浮动-1"><a href="#浮动-1" class="headerlink" title="浮动"></a>浮动</h2><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>性质1：浮动的元素脱标,脱标即脱离标准流</p>
+<p><strong>一旦一个元素浮动了，那么，将能够并排了，并且能够设置宽高了。无论它原来是个div还是个span。</strong>所有标签，<strong>浮动之后，已经不区分行内、块级了。</strong></p>
+<p>性质2：浮动的元素互相贴靠</p>
+<p>性质3：浮动的元素有“字围”效果</p>
+<p>总结：<strong>标准流中的文字不会被浮动的盒子遮挡住</strong>。</p>
+<p>性质4：收缩</p>
+<p>收缩：一个浮动的元素，如果没有设置width，那么将自动收缩为内容的宽度（这点非常像行内元素）。</p>
+<h3 id="清除浮动-清除浮动带来的影响"><a href="#清除浮动-清除浮动带来的影响" class="headerlink" title="清除浮动(清除浮动带来的影响)"></a>清除浮动(清除浮动带来的影响)</h3><p>背景:两个父级div,都拥有浮动子级</p>
+<p><strong>最优解:</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">	<span class="attribute">content</span>:<span class="string">&quot; &quot;</span>;</span><br><span class="line">	<span class="attribute">display</span>:block;</span><br><span class="line">	<span class="attribute">clear</span>:both</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="方法1：给浮动元素的祖先元素加高度"><a href="#方法1：给浮动元素的祖先元素加高度" class="headerlink" title="方法1：给浮动元素的祖先元素加高度"></a>方法1：给浮动元素的祖先元素加高度</h4><p>总结：</p>
+<p><strong>如果一个元素要浮动，那么它的祖先元素一定要有高度。</strong></p>
+<p><strong>有高度的盒子，才能关住浮动</strong>。（记住这句过来人的经验之语）</p>
+<p>只要浮动在一个有高度的盒子中，那么这个浮动就不会影响后面的浮动元素。所以就是清除浮动带来的影响了。</p>
+<h4 id="方法2：clear-both"><a href="#方法2：clear-both" class="headerlink" title="方法2：clear:both;"></a>方法2：clear:both;</h4><p><code>clear:both</code>的意思就是：<strong>不允许左侧和右侧有浮动对象。</strong>第二个父级div添加</p>
+<p><strong>它所在的标签，margin属性失效了</strong>,margin失效的本质原因是：上图中的box1和box2，高度为零。</p>
+<h4 id="方法3：隔墙法"><a href="#方法3：隔墙法" class="headerlink" title="方法3：隔墙法,"></a>方法3：隔墙法,</h4><p><em>1.将父级中间加一个div:clear:both</em></p>
+<p><em>2.“内墙法”  在第一个父级末尾加div:clear:both</em></p>
+<h4 id="方法4：overflow-hidden-overflow-auto"><a href="#方法4：overflow-hidden-overflow-auto" class="headerlink" title="方法4：overflow:hidden;overflow: auto;"></a>方法4：overflow:hidden;overflow: auto;</h4><p>只要给父亲加上<code>overflow:hidden</code>; 那么，父亲就能被儿子撑出高了。这是一个<strong>偏方</strong>。</p>
+<h1 id="margin折叠"><a href="#margin折叠" class="headerlink" title="margin折叠"></a>margin折叠</h1><p>margin塌陷/margin重叠</p>
+<p>标准文档流中，<em>竖直方向的margin不叠加</em>，取较大的值作为margin(<em>水平方向的margin是可以叠加的</em>，即水平方向没有塌陷现象)。</p>
+<p><strong>相邻元素之间</strong> 毗邻的两个元素之间的外边距会折叠（除非后一个元素需要清除之前的浮动）。</p>
+<p><strong>父元素与其第一个或最后一个子元素之间</strong> 如果在父元素与其第一个子元素之间不存在<strong>边框</strong>、<strong>内边距</strong>、<strong>行内内容</strong>，也没有创建<strong>块格式化上下文</strong>、或者<strong>清除浮动</strong>将两者的 margin-top 分开；或者在父元素与其最后一个子元素之间不存在边框、内边距、行内内容、height、min-height、max-height 将两者的 margin-bottom 分开，那么这两对外边距之间会产生折叠。此时子元素的外边距会“溢出”到父元素的外面。</p>
+<p>从上面一段话总结下可以去除外边距折叠的方法：</p>
+<ol>
+<li>父元素添加边框(border)；</li>
+<li>父元素添加内边距(padding)；</li>
+<li>父子元素之间存在行内元素 <code>&lt;span&gt;</code> <code>匿名元素</code>；</li>
+<li>父子元素之间存在触发 BFC 的元素（插入一个 <code>display: flex</code> 的块级元素）；</li>
+<li>父元素触发 BFC（<code>overflow: auto;</code> 等）；</li>
+</ol>
+<h1 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h1><p><strong>BFC(Block formatting context)直译为”块级格式化上下文”。它是一个独立的渲染区域</strong>，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。</p>
+<p>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。</p>
+<p>如何创建BFC</p>
+<p>1、float的值不是none。<br>2、position的值是<code>absolute和fixed</code><br>3、display的值是inline-block、table-cell、flex、table-caption或者inline-flex<br>4、overflow的值不是visible,<code>是auto和hidden</code><br>5、html 根元素</p>
+<p>总结：</p>
+<ul>
+<li><strong>浮动定位和清除浮动时只会应用于同一个 BFC 内的元素</strong>，浮动不会影响其它 BFC 中元素的布局；</li>
+<li><strong>而清除浮动只能清除同一 BFC 中在它前面的元素的浮动</strong>；</li>
+<li><strong>外边距折叠（Margin collapsing）也只会发生在属于同一 BFC 的块级元素之间</strong>；</li>
+<li><strong>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然</strong>；</li>
+<li><strong>计算BFC的高度时，考虑BFC所包含的所有元素，连浮动元素也参与计算</strong>；</li>
+<li><strong>浮动盒区域不叠加到BFC上</strong>；</li>
+</ul>
+<h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h1><p>分别是绝对定位、相对定位、固定定位。</p>
+<pre><code>position: absolute;  &lt;!-- 绝对定位 --&gt; 定位于有定位的祖先
+
+position: relative;  &lt;!-- 相对定位 --&gt; 定位于自己,微调
+
+position: fixed;     &lt;!-- 固定定位 --&gt;  相对浏览器窗口进行定位。无论页面如何滚动，这个盒子显示的位置不变。
+</code></pre>
+<p><strong>相对定位</strong>：不脱标，老家留坑，<strong>别人不会把它的位置挤走</strong>。</p>
+<p><strong>绝对定位:脱离了标准文档流。</strong></p>
+<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><p><a href="../Web-master/02-CSS%E5%9F%BA%E7%A1%80/12-CSS3%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3%EF%BC%9A%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3.md">详细</a></p>
+<h2 id="过渡：transition"><a href="#过渡：transition" class="headerlink" title="过渡：transition"></a>过渡：transition</h2><p>可以实现元素<strong>不同状态间的平滑过渡</strong>（补间动画）</p>
+<p>transition 包括以下属性：</p>
+<ul>
+<li><p><code>transition-property: all;</code>  如果希望所有的属性都发生过渡，就使用all。</p>
+</li>
+<li><p><code>transition-duration: 1s;</code> 过渡的持续时间。</p>
+</li>
+<li><p><code>transition-timing-function: linear;</code>  运动曲线。属性值可以是：</p>
+<ul>
+<li><code>linear</code> 线性</li>
+<li><code>ease</code>  减速</li>
+<li><code>ease-in</code> 加速</li>
+<li><code>ease-out</code> 减速</li>
+<li><code>ease-in-out</code>  先加速后减速</li>
+</ul>
+</li>
+<li><p><code>transition-delay: 1s;</code> 过渡延迟。多长时间后再执行这个过渡动画。</p>
+</li>
+</ul>
+<p>上面的四个属性也可以写成<strong>综合属性</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">transition</span>: 让哪些属性进行过度 过渡的持续时间 运动曲线 延迟时间;</span><br><span class="line"></span><br><span class="line"><span class="attr">transition</span>: all 3s linear 0s;</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>transition-property</code>这个属性是尤其需要注意的，不同的属性值有不同的现象。</p>
+<h2 id="2D-转换-transform"><a href="#2D-转换-transform" class="headerlink" title="2D 转换 transform"></a>2D 转换 transform</h2><p><strong>转换</strong>是 CSS3 中具有颠覆性的一个特征，可以实现元素的<strong>位移、旋转、变形、缩放</strong>，甚至支持矩阵方式。</p>
+<h3 id="1、缩放：scale"><a href="#1、缩放：scale" class="headerlink" title="1、缩放：scale"></a>1、缩放：<code>scale</code></h3><p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">transform</span>: <span class="title function_">scale</span>(x, y);</span><br><span class="line"></span><br><span class="line"><span class="attr">transform</span>: <span class="title function_">scale</span>(<span class="number">2</span>, <span class="number">0.5</span>);</span><br></pre></td></tr></table></figure>
+
+<p>参数解释： x：表示水平方向的缩放倍数。y：表示垂直方向的缩放倍数。如果只写一个值就是等比例缩放。</p>
+<h3 id="2、位移：translate"><a href="#2、位移：translate" class="headerlink" title="2、位移：translate"></a>2、位移：<code>translate</code></h3><p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">transform</span>: <span class="title function_">translate</span>(水平位移, 垂直位移);</span><br><span class="line"></span><br><span class="line"><span class="attr">transform</span>: <span class="title function_">translate</span>(-<span class="number">50</span>%, -<span class="number">50</span>%);</span><br></pre></td></tr></table></figure>
+
+<p>参数解释：</p>
+<ul>
+<li><p>参数为百分比，<strong>相对于自身宽高</strong>。不是父级!!!!!</p>
+</li>
+<li><p>正值：向右和向下。 负值：向左和向上。如果只写一个值，则表示水平移动。</p>
+</li>
+</ul>
+<h3 id="3、旋转：rotate"><a href="#3、旋转：rotate" class="headerlink" title="3、旋转：rotate"></a>3、旋转：<code>rotate</code></h3><p>格式：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">transform</span>: <span class="title function_">rotate</span>(角度);</span><br><span class="line"></span><br><span class="line"><span class="attr">transform</span>: <span class="title function_">rotate</span>(45deg);</span><br></pre></td></tr></table></figure>
+
+<p>参数解释：正值 顺时针；负值：逆时针。</p>
+<p>如果想<strong>改变旋转的坐标原点</strong>，可以用<code>transform-origin</code>属性</p>
+<h3 id="4-倾斜-skew"><a href="#4-倾斜-skew" class="headerlink" title="4.倾斜: skew"></a>4.倾斜: <code>skew</code></h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">transform:skew(&lt;angle&gt; [,&lt;angle&gt;]);</span><br></pre></td></tr></table></figure>
+
+<p>包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。</p>
+<ul>
+<li>skewX(<angle>);表示只在X轴(水平方向)倾斜。</li>
+<li>skewY(<angle>);表示只在Y轴(垂直方向)倾斜。</li>
+</ul>
+<h3 id="5-六合一-matrix"><a href="#5-六合一-matrix" class="headerlink" title="5. 六合一:matrix"></a>5. 六合一:<code>matrix</code></h3><p>matrix()方法和2D变换方法合并成一个。</p>
+<p>matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。</p>
+<h2 id="3D-转换-transform"><a href="#3D-转换-transform" class="headerlink" title="3D 转换 transform"></a>3D 转换 transform</h2><h3 id="1、旋转：rotateX、rotateY、rotateZ"><a href="#1、旋转：rotateX、rotateY、rotateZ" class="headerlink" title="1、旋转：rotateX、rotateY、rotateZ"></a>1、旋转：rotateX、rotateY、rotateZ</h3><p><strong>格式：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">transform</span>: <span class="title function_">rotateX</span>(360deg);    <span class="comment">//绕 X 轴旋转360度</span></span><br><span class="line"></span><br><span class="line"><span class="attr">transform</span>: <span class="title function_">rotateY</span>(360deg);    <span class="comment">//绕 Y 轴旋转360度</span></span><br><span class="line"></span><br><span class="line"><span class="attr">transform</span>: <span class="title function_">rotateZ</span>(360deg);    <span class="comment">//绕 Z 轴旋转360度</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、移动：translateX、translateY、translateZ"><a href="#2、移动：translateX、translateY、translateZ" class="headerlink" title="2、移动：translateX、translateY、translateZ"></a>2、移动：translateX、translateY、translateZ</h3><p><strong>格式：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">transform</span>: <span class="title function_">translateX</span>(100px);    <span class="comment">//沿着 X 轴移动</span></span><br><span class="line"></span><br><span class="line"><span class="attr">transform</span>: <span class="title function_">translateY</span>(360px);    <span class="comment">//沿着 Y 轴移动</span></span><br><span class="line"></span><br><span class="line"><span class="attr">transform</span>: <span class="title function_">translateZ</span>(360px);    <span class="comment">//沿着 Z 轴移动</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-缩放"><a href="#3-缩放" class="headerlink" title="3. 缩放"></a>3. 缩放</h3><table>
+<thead>
+<tr>
+<th>scaleX(<em>x</em>)</th>
+<th>定义 3D 缩放转换，通过给定一个 X 轴的值。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>scaleY(<em>y</em>)</td>
+<td>定义 3D 缩放转换，通过给定一个 Y 轴的值。</td>
+</tr>
+<tr>
+<td>scaleZ(<em>z</em>)</td>
+<td>定义 3D 缩放转换，通过给定一个 Z 轴的值。</td>
+</tr>
+</tbody></table>
+<h3 id="4、透视：perspective"><a href="#4、透视：perspective" class="headerlink" title="4、透视：perspective"></a>4、透视：perspective</h3><p>电脑显示屏是一个 2D 平面，图像之所以具有立体感（3D效果），其实只是一种视觉呈现，通过透视可以实现此目的。</p>
+<p>定义 3D 转换元素的透视视图。<strong>相当于定义元素距离人眼远近</strong></p>
+<p>格式有两种写法：</p>
+<ul>
+<li><p>作为一个属性，设置给父元素，作用于所有3D转换的子元素</p>
+</li>
+<li><p>作为 transform 属性的一个值，做用于元素自身。</p>
+</li>
+</ul>
+<p>格式举例：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">perspective</span>: <span class="number">500px</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、3D呈现（transform-style）"><a href="#5、3D呈现（transform-style）" class="headerlink" title="5、3D呈现（transform-style）"></a>5、3D呈现（transform-style）</h3><p>3D元素构建是指某个图形是由多个元素构成的，可以给这些元素的<strong>父元素</strong>设置<code>transform-style: preserve-3d</code>来使其变成一个真正的3D图形。属性值可以如下：</p>
+<p>transform-style: flat|preserve-3d;</p>
+<p>相当于父元素设置为3D图形,父元素旋转了60度,那么子元素天生也得转了60度</p>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">flat</td>
+<td align="left">表示所有子元素在2D平面呈现。</td>
+</tr>
+<tr>
+<td align="left">preserve-3d</td>
+<td align="left">表示所有子元素在3D空间中呈现。</td>
+</tr>
+</tbody></table>
+<h2 id="动画：animation"><a href="#动画：animation" class="headerlink" title="动画：animation"></a>动画：animation</h2><p>动画是CSS3中具有颠覆性的特征，可通过设置<strong>多个节点</strong> 来精确控制一个或一组动画，常用来实现<strong>复杂</strong>的动画效果。</p>
+<h3 id="1、定义动画的步骤"><a href="#1、定义动画的步骤" class="headerlink" title="1、定义动画的步骤"></a>1、定义动画的步骤</h3><p>（1）通过<code>@keyframes</code>定义动画；</p>
+<p>（2）将这段动画通过百分比，分割成<strong>多个节点</strong>；然后各节点中分别定义各属性；</p>
+<p>（3）在指定元素里，通过 <code>animation</code> 属性调用动画。</p>
+<p>之前,我们在 js 中定义一个函数的时候，是先定义，再调用：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">js 定义函数：</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params"></span>)&#123; 函数体 &#125;</span><br><span class="line"></span><br><span class="line"> 调用：</span><br><span class="line"> 	<span class="title function_">fun</span>();</span><br></pre></td></tr></table></figure>
+
+<p>同样，我们在 CSS3 中<strong>定义动画</strong>的时候，也是<strong>先定义，再调用</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">定义动画：</span><br><span class="line">    @keyframes 动画名&#123;</span><br><span class="line">        <span class="keyword">from</span>&#123; 初始状态 &#125;</span><br><span class="line">        to&#123; 结束状态 &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"> 调用：</span><br><span class="line">  <span class="attr">animation</span>: 动画名称 持续时间；</span><br></pre></td></tr></table></figure>
+
+<p>其中，animation属性的格式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">animation</span>: 定义的动画名称 持续时间  执行次数  是否反向  运动曲线 延迟执行。(infinite 表示无限次)</span><br><span class="line"></span><br><span class="line"><span class="attr">animation</span>: move1 1s  alternate linear <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="attr">animation</span>: move2 4s;</span><br></pre></td></tr></table></figure>
+
+<p><strong>定义动画的格式举例：</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.box</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background-color</span>: red;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="comment">/* 调用动画*/</span></span></span><br><span class="line"><span class="language-css">            <span class="comment">/* animation: 动画名称 持续时间  执行次数  是否反向  运动曲线 延迟执行。infinite 表示无限次*/</span></span></span><br><span class="line"><span class="language-css">            <span class="comment">/*animation: move 1s  alternate linear 3;*/</span></span></span><br><span class="line"><span class="language-css">            <span class="attribute">animation</span>: move2 <span class="number">4s</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="comment">/* 方式一：定义一组动画*/</span></span></span><br><span class="line"><span class="language-css">        <span class="keyword">@keyframes</span> move1 &#123;</span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">from</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0px</span>) <span class="built_in">rotate</span>(<span class="number">0deg</span>);</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">to</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">500px</span>) <span class="built_in">rotate</span>(<span class="number">555deg</span>);</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="comment">/* 方式二：定义多组动画*/</span></span></span><br><span class="line"><span class="language-css">        <span class="keyword">@keyframes</span> move2 &#123;</span></span><br><span class="line"><span class="language-css">            <span class="number">0%</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0px</span>) <span class="built_in">translateY</span>(<span class="number">0px</span>);</span></span><br><span class="line"><span class="language-css">                <span class="attribute">background-color</span>: red;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">border-radius</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="number">25%</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">500px</span>) <span class="built_in">translateY</span>(<span class="number">0px</span>);</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="comment">/*动画执行到 50% 的时候，背景色变成绿色，形状变成圆形*/</span></span></span><br><span class="line"><span class="language-css">            <span class="number">50%</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="comment">/* 虽然两个方向都有translate，但其实只是Y轴上移动了200px。</span></span></span><br><span class="line"><span class="comment"><span class="language-css">                因为X轴的500px是相对最开始的原点来说的。可以理解成此时的 translateX 是保存了之前的位移 */</span></span></span><br><span class="line"><span class="language-css">                <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">500px</span>) <span class="built_in">translateY</span>(<span class="number">200px</span>);</span></span><br><span class="line"><span class="language-css">                <span class="attribute">background-color</span>: green;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="number">75%</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0px</span>) <span class="built_in">translateY</span>(<span class="number">200px</span>);</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="comment">/*动画执行到 100% 的时候，背景色还原为红色，形状还原为正方形*/</span></span></span><br><span class="line"><span class="language-css">            <span class="number">100%</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="comment">/*坐标归零，表示回到原点。*/</span></span></span><br><span class="line"><span class="language-css">                <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0px</span>) <span class="built_in">translateY</span>(<span class="number">0px</span>);</span></span><br><span class="line"><span class="language-css">                <span class="attribute">background-color</span>: red;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">border-radius</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意好好看代码中的注释。</p>
+<h3 id="2、动画属性"><a href="#2、动画属性" class="headerlink" title="2、动画属性"></a>2、动画属性</h3><p>我们刚刚在调用动画时，animation属性的格式如下：</p>
+<p>animation属性的格式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">animation</span>: 定义的动画名称  持续时间  执行次数  是否反向  运动曲线 延迟执行。(infinite 表示无限次)</span><br><span class="line"></span><br><span class="line"><span class="attr">animation</span>: move1 1s  alternate linear <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="attr">animation</span>: move2 4s;</span><br></pre></td></tr></table></figure>
+
+
+<p>可以看出，这里的 animation 是综合属性，接下来，我们把这个综合属性拆分看看。</p>
+<p>（1）动画名称：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">animation-<span class="attr">name</span>: move;</span><br></pre></td></tr></table></figure>
+
+<p>（2）执行一次动画的持续时间：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">animation-<span class="attr">duration</span>: 4s;</span><br></pre></td></tr></table></figure>
+
+<p>备注：上面两个属性，是必选项，且顺序固定。</p>
+<p>（3）动画的执行次数：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">animation-iteration-<span class="attr">count</span>: <span class="number">1</span>;       <span class="comment">//iteration的含义表示迭代</span></span><br></pre></td></tr></table></figure>
+
+<p>属性值<code>infinite</code>表示无数次。</p>
+<p>（3）动画的方向：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">animation-<span class="attr">direction</span>: alternate;</span><br></pre></td></tr></table></figure>
+
+<p>属性值：normal 正常，alternate 反向。</p>
+<p>（4）动画延迟执行：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">animation-<span class="attr">delay</span>: 1s;</span><br></pre></td></tr></table></figure>
+
+<p>（5）设置动画结束时，盒子的状态：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">animation-fill-<span class="attr">mode</span>: forwards;</span><br></pre></td></tr></table></figure>
+
+<p>属性值： forwards：保持动画结束后的状态（默认），  backwards：动画结束后回到最初的状态。</p>
+<p>（6）运动曲线：  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">animation-timing-function: ease-in;</span><br></pre></td></tr></table></figure>
+
+<p>属性值可以是：linear   ease-in-out  steps()等。</p>
+<p>注意，如果把属性值写成**<code> steps()</code><strong>，则表示动画</strong>不是连续执行**，而是间断地分成几步执行。我们接下来专门讲一下属性值 <code>steps()</code>。</p>
+<p>我们还是拿上面的例子来举例，如果在调用动画时，我们写成：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">animation</span>: move2 4s <span class="title function_">steps</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h1><p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<h2 id="一、Flex-布局是什么？"><a href="#一、Flex-布局是什么？" class="headerlink" title="一、Flex 布局是什么？"></a>一、Flex 布局是什么？</h2><p>Flex 是 Flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p>
+<p>任何一个容器都可以指定为 Flex 布局。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>行内元素也可以使用 Flex 布局。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line"><span class="attribute">display</span>: inline-flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>Webkit 内核的浏览器，必须加上<code>-webkit</code>前缀。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line"><span class="attribute">display</span>: -webkit-flex; <span class="comment">/* Safari */</span></span><br><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>注意，设为 Flex 布局以后，子元素的<code>float</code>、<code>clear</code>和<code>vertical-align</code>属性将失效。</p>
+<h2 id="二、基本概念"><a href="#二、基本概念" class="headerlink" title="二、基本概念"></a>二、基本概念</h2><p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png" alt="img"><br>容器默认存在两根轴：水平的主轴（<code>main axis</code>）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做<code>main start</code>，结束位置叫做<code>main end</code>；交叉轴的开始位置叫做<code>cross start</code>，结束位置叫做<code>cross end</code>。</p>
+<p>项目默认沿主轴排列。单个项目占据的主轴空间叫做<code>main size</code>，占据的交叉轴空间叫做<code>cross size</code>。</p>
+<h2 id="三、容器的属性"><a href="#三、容器的属性" class="headerlink" title="三、容器的属性"></a>三、容器的属性</h2><p>以下6个属性设置在容器上。</p>
+<blockquote>
+<ul>
+<li><strong>flex-direction:决定主轴的方向</strong></li>
+<li>flex-wrap:如何换行</li>
+<li>flex-flow:上两个的合写</li>
+<li><strong>justify-content:(一行)项目在主轴上的对齐方式</strong></li>
+<li><strong>align-items:(一行)项目在交叉轴上如何对齐</strong></li>
+<li>align-content:行与行之间的对齐方式</li>
+</ul>
+</blockquote>
+<h3 id="3-1-flex-direction属性"><a href="#3-1-flex-direction属性" class="headerlink" title="3.1 flex-direction属性"></a>3.1 flex-direction属性</h3><p><code>flex-direction</code>属性决定主轴的方向（即项目的排列方向）。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line"><span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png" alt="img"></p>
+<p>它可能有4个值。</p>
+<blockquote>
+<ul>
+<li><code>row</code>（默认值）：主轴为水平方向，起点在左端。</li>
+<li><code>row-reverse</code>：主轴为水平方向，起点在右端。</li>
+<li><code>column</code>：主轴为垂直方向，起点在上沿。</li>
+<li><code>column-reverse</code>：主轴为垂直方向，起点在下沿。</li>
+</ul>
+</blockquote>
+<h3 id="3-2-flex-wrap属性"><a href="#3-2-flex-wrap属性" class="headerlink" title="3.2 flex-wrap属性"></a>3.2 flex-wrap属性</h3><p>[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[默认情况下，项目都排在一条线（又称”轴线”）上。<code>flex-wrap</code>属性定义，如果一条轴线排不下，如何换行]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071006.png" alt="img"></p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line"><span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>它可能取三个值。</p>
+<p>（1）<code>nowrap</code>（默认）：不换行。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071007.png" alt="img"></p>
+<p>（2）<code>wrap</code>：换行，第一行在上方。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071008.jpg" alt="img"></p>
+<p>（3）<code>wrap-reverse</code>：换行，第一行在下方。</p>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg" alt="img"></p>
+<h3 id="3-3-flex-flow"><a href="#3-3-flex-flow" class="headerlink" title="3.3 flex-flow"></a>3.3 flex-flow</h3><p><code>flex-flow</code>属性是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为<code>row nowrap</code>。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line"><span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="3-4-justify-content属性"><a href="#3-4-justify-content属性" class="headerlink" title="3.4 justify-content属性"></a>3.4 justify-content属性</h3><p><code>justify-content</code>属性定义了项目在主轴上的对齐方式。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line"><span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png" alt="img"></p>
+<p>它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>（默认值）：左对齐</li>
+<li><code>flex-end</code>：右对齐</li>
+<li><code>center</code>： 居中</li>
+<li><code>space-between</code>：两端对齐，项目之间的间隔都相等。</li>
+<li><code>space-around</code>：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+</blockquote>
+<h3 id="3-5-align-items属性"><a href="#3-5-align-items属性" class="headerlink" title="3.5 align-items属性"></a>3.5 align-items属性</h3><p><code>align-items</code>属性定义项目在交叉轴上如何对齐。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line"><span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png" alt="img"></p>
+<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>：交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：交叉轴的终点对齐。</li>
+<li><code>center</code>：交叉轴的中点对齐。</li>
+<li><code>baseline</code>: 项目的第一行文字的基线对齐。</li>
+<li><code>stretch</code>（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+</blockquote>
+<h3 id="3-6-align-content属性"><a href="#3-6-align-content属性" class="headerlink" title="3.6 align-content属性"></a>3.6 align-content属性</h3><p><code>align-content</code>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line"><span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png" alt="img"></p>
+<p>该属性可能取6个值。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>：与交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：与交叉轴的终点对齐。</li>
+<li><code>center</code>：与交叉轴的中点对齐。</li>
+<li><code>space-between</code>：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li><code>space-around</code>：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li><code>stretch</code>（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+</blockquote>
+<h2 id="四、项目的属性"><a href="#四、项目的属性" class="headerlink" title="四、项目的属性"></a>四、项目的属性</h2><p>以下6个属性设置在项目上。</p>
+<blockquote>
+<ul>
+<li><code>order</code></li>
+<li><code>flex-grow</code></li>
+<li><code>flex-shrink</code></li>
+<li><code>flex-basis</code></li>
+<li><code>flex</code></li>
+<li><code>align-self</code></li>
+</ul>
+</blockquote>
+<h3 id="4-1-order属性"><a href="#4-1-order属性" class="headerlink" title="4.1 order属性"></a>4.1 order属性</h3><p><code>order</code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line"><span class="attribute">order</span>: &lt;integer&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png" alt="img"></p>
+<h3 id="4-2-flex-grow属性"><a href="#4-2-flex-grow属性" class="headerlink" title="4.2 flex-grow属性"></a>4.2 flex-grow属性</h3><p><code>flex-grow</code>属性定义项目的放大比例，默认为<code>0</code>，<strong>即如果存在剩余空间，也不放大</strong>。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line"><span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071014.png" alt="img"></p>
+<p>如果所有项目的<code>flex-grow</code>属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的<code>flex-grow</code>属性为2，其他项目都为1，<em>则前者占据的剩余空间将比其他项多一倍。</em></p>
+<h3 id="4-3-flex-shrink属性"><a href="#4-3-flex-shrink属性" class="headerlink" title="4.3 flex-shrink属性"></a>4.3 flex-shrink属性</h3><p><code>flex-shrink</code>属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line"><span class="attribute">flex-shrink</span>: &lt;number&gt;; <span class="comment">/* default 1 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg" alt="img"></p>
+<p>如果所有项目的<code>flex-shrink</code>属性都为1，当空间不足时，都将等比例缩小。如果一个项目的<code>flex-shrink</code>属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
+<p>负值对该属性无效。</p>
+<h3 id="4-4-flex-basis属性"><a href="#4-4-flex-basis属性" class="headerlink" title="4.4 flex-basis属性"></a>4.4 flex-basis属性</h3><p><code>flex-basis</code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为<code>auto</code>，即项目的本来大小。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line"><span class="attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="comment">/* default auto */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>它可以设为跟<code>width</code>或<code>height</code>属性一样的值（比如350px），则项目将占据固定空间。</p>
+<h3 id="4-5-flex属性"><a href="#4-5-flex属性" class="headerlink" title="4.5 flex属性"></a>4.5 flex属性</h3><p><code>flex</code>属性是<code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code>的简写，默认值为<code>0 1 auto</code>。后两个属性可选。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line"><span class="attribute">flex</span>: none | [ &lt;<span class="string">&#x27;flex-grow&#x27;</span>&gt; &lt;<span class="string">&#x27;flex-shrink&#x27;</span>&gt;? || &lt;<span class="string">&#x27;flex-basis&#x27;</span>&gt; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>该属性有两个快捷值：<code>auto</code> (<code>1 1 auto</code>) 和 none (<code>0 0 auto</code>)。</p>
+<p>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
+<h3 id="4-6-align-self属性"><a href="#4-6-align-self属性" class="headerlink" title="4.6 align-self属性"></a>4.6 align-self属性</h3><p><code>align-self</code>属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<code>align-items</code>属性。默认值为<code>auto</code>，表示继承父元素的<code>align-items</code>属性，如果没有父元素，则等同于<code>stretch</code>。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line"><span class="attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img src="https://www.ruanyifeng.com/blogimg/asset/2015/bg2015071016.png" alt="img"></p>
+<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
+<h1 id="常见面试题"><a href="#常见面试题" class="headerlink" title="常见面试题"></a>常见面试题</h1><h2 id="隐藏盒子的几种方式"><a href="#隐藏盒子的几种方式" class="headerlink" title="隐藏盒子的几种方式"></a>隐藏盒子的几种方式</h2><p>（1）方式一：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">overflow：hidden;   //隐藏盒子超出的部分</span><br></pre></td></tr></table></figure>
+
+
+<p>（2）<strong>方式二</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">display: none;	  隐藏盒子，而且不占位置(用的最多)</span><br></pre></td></tr></table></figure>
+
+<p>比如，点击<code>X</code>，关闭京东首页上方的广告栏。</p>
+<p>（3）方式三：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">visibility: hidden;   //隐藏盒子，占位置。</span><br><span class="line">visibility: visible;   //让盒子重新显示</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>（4）方式四：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">opacity: 0;       //设置盒子的透明度（不建议，因为内容也会半透明），占位置</span><br></pre></td></tr></table></figure>
+
+
+<p>（4）方式五：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Position/top/left/...-999px   //把盒子移得远远的，占位置。</span><br></pre></td></tr></table></figure>
+
+<p>（5）方式六：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">margin-left: 1000px;</span><br></pre></td></tr></table></figure>
+
+<h2 id="行内元素居中"><a href="#行内元素居中" class="headerlink" title="行内元素居中"></a>行内元素居中</h2><h3 id="行内元素水平居中"><a href="#行内元素水平居中" class="headerlink" title="行内元素水平居中"></a>行内元素水平居中</h3><p>给父容器设置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">text-align: center;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="行内元素垂直居中"><a href="#行内元素垂直居中" class="headerlink" title="行内元素垂直居中"></a>行内元素垂直居中</h3><p>让<strong>文字的行高</strong> 等于 <strong>盒子的高度</strong>，可以让单行文本垂直居中。比如：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>或vertical-align:middle</p>
+<h2 id="块级元素水平垂直居中"><a href="#块级元素水平垂直居中" class="headerlink" title="块级元素水平垂直居中"></a>块级元素水平垂直居中</h2><h3 id="margin-auto-的问题"><a href="#margin-auto-的问题" class="headerlink" title="margin: auto 的问题"></a>margin: auto 的问题</h3><p>如果要对一个元素<strong>垂直居中</strong>，<code>margin: auto</code>就行不通了。</p>
+<h3 id="绝对定位-translate（无需指定子元素的宽高，推荐）"><a href="#绝对定位-translate（无需指定子元素的宽高，推荐）" class="headerlink" title="绝对定位 + translate（无需指定子元素的宽高，推荐）"></a>绝对定位 + translate（无需指定子元素的宽高，推荐）</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span>&#123;</span><br><span class="line">            <span class="attribute">position</span>: relative;</span><br><span class="line">            <span class="attribute">min-height</span>: <span class="number">500px</span>;</span><br><span class="line">            <span class="attribute">background</span>: pink;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.son</span> &#123;</span><br><span class="line">            <span class="attribute">position</span>: absolute;</span><br><span class="line">            <span class="attribute">background</span>: red;</span><br><span class="line">            <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方式3：flex-布局"><a href="#方式3：flex-布局" class="headerlink" title="方式3：flex 布局"></a>方式3：flex 布局</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.father&#123;</span><br><span class="line">            display: flex;</span><br><span class="line">            justify-content: center;</span><br><span class="line">            align-items: center;</span><br><span class="line">            min-height: 100vh;</span><br><span class="line">            background: pink;</span><br><span class="line">        &#125;</span><br><span class="line">        .son &#123;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="flex-布局-margin-auto（推荐）"><a href="#flex-布局-margin-auto（推荐）" class="headerlink" title="flex 布局 + margin: auto（推荐）"></a>flex 布局 + margin: auto（推荐）</h3><p>我们只需写两行声明即可：先给父容器设置 <code>display: flex</code>，再给指定的子元素设置我们再熟悉不过的 <code>margin: auto</code>，即可让这个指定的子元素在<strong>剩余空间</strong>里，水平垂直居中。大功告成。</p>
+<p>代码举例：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        * &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.father</span>&#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background</span>: pink;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.son</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: auto;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">background</span>: red;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;father&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son&quot;</span>&gt;</span>子元素的内容，想水平垂直居中<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son2&quot;</span>&gt;</span>这个元素不想水平垂直居中<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>请注意，当我们给父容器使用 Flex 布局 时，子元素的<code>margin: auto</code>不仅能让其在水平方向上居中，<strong>垂直方向上也是居中的</strong>。</p>
+]]></content>
+      <categories>
+        <category>前端基础知识</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
       </tags>
   </entry>
 </search>
