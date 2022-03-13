@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo与typora图片路径引用方式保持一致</title>
-    <url>/2022/03/11/blog/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/</url>
-    <content><![CDATA[<p>hexo的变态引入图片方式就不用多说了吧，typora作为当前最优雅和流行markdown的编辑器，他们的图片路径引用方式不统一，这就导致了我想在本地直接看md文件，但是发布到hexo中有需要手动改变图片引用路径。<br>经过一番探索，完美解决</p>
-<h1 id="设置typora"><a href="#设置typora" class="headerlink" title="设置typora"></a>设置typora</h1><p>偏好设置 –&gt; 图像 –&gt; 插入图片时..<br>选择复制到指定路径 选择./${filename}</p>
-<h1 id="设置hexo"><a href="#设置hexo" class="headerlink" title="设置hexo"></a>设置hexo</h1><ol>
-<li>添加库：npm install hexo-typora-img<br>npm 官网 <a href="https://www.npmjs.com/package/hexo-typora-img">https://www.npmjs.com/package/hexo-typora-img</a></li>
-<li>设置scaffolds文件夹中的post.md的front matter模板，添加：<br>typora-copy-images-to: hexo与typora图片路径引用方式保持一致</li>
-<li>设置_config.yml<br>post_asset_folder: true</li>
-<li>解决首页不加载图片的问题,设置_config.yml<br>marked:<br>prependRoot: true<br>postAsset: true</li>
-<li>控制首页想显示什么（基于next）<br><a href="https://theme-next.js.org/docs/theme-settings/posts">https://theme-next.js.org/docs/theme-settings/posts</a><br>方法一:在想在首页显示的内容后面添加<code>&lt;!-- more --&gt; </code><br>方法二：使用description ,但是没办法使用图片</li>
-</ol>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>taylor</title>
     <url>/2022/03/10/taylor/taylor/</url>
     <content><![CDATA[<p><img src="/2022/03/10/taylor/taylor/639902.jpg" alt="639902"></p>
@@ -733,6 +712,27 @@ position: fixed;     &lt;!-- 固定定位 --&gt;  相对浏览器窗口进行定
       </categories>
       <tags>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo与typora图片路径引用方式保持一致</title>
+    <url>/2022/03/11/blog/hexo%E4%B8%8Etypora%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4/</url>
+    <content><![CDATA[<p>hexo的变态引入图片方式就不用多说了吧，typora作为当前最优雅和流行markdown的编辑器，他们的图片路径引用方式不统一，这就导致了我想在本地直接看md文件，但是发布到hexo中有需要手动改变图片引用路径。<br>经过一番探索，完美解决</p>
+<h1 id="设置typora"><a href="#设置typora" class="headerlink" title="设置typora"></a>设置typora</h1><p>偏好设置 –&gt; 图像 –&gt; 插入图片时..<br>选择复制到指定路径 选择./${filename}</p>
+<h1 id="设置hexo"><a href="#设置hexo" class="headerlink" title="设置hexo"></a>设置hexo</h1><ol>
+<li>添加库：npm install hexo-typora-img<br>npm 官网 <a href="https://www.npmjs.com/package/hexo-typora-img">https://www.npmjs.com/package/hexo-typora-img</a></li>
+<li>设置scaffolds文件夹中的post.md的front matter模板，添加：<br>typora-copy-images-to: hexo与typora图片路径引用方式保持一致</li>
+<li>设置_config.yml<br>post_asset_folder: true</li>
+<li>解决首页不加载图片的问题,设置_config.yml<br>marked:<br>prependRoot: true<br>postAsset: true</li>
+<li>控制首页想显示什么（基于next）<br><a href="https://theme-next.js.org/docs/theme-settings/posts">https://theme-next.js.org/docs/theme-settings/posts</a><br>方法一:在想在首页显示的内容后面添加<code>&lt;!-- more --&gt; </code><br>方法二：使用description ,但是没办法使用图片</li>
+</ol>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
       </tags>
   </entry>
 </search>
